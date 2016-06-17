@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:decisionTable xmlns:ns1="http://com.softwareag.rules/metaphor" xmlns:ns2="http://com.softwareag.rules/dt" xmlns:ns3="http://com.softwareag.rules/er" processingMode="inferentialProcessing" version="9.7.0.0.78">
+    <ns1:comment></ns1:comment>
+    <ns1:actions/>
+    <ns1:parameters>
+        <ns1:parameter type="data model" name="Rule_DM_1" ioKey="-4994f6bb:1555ef5159e:-7fee" parameterType="both" matchAny="true">
+            <ns1:model>/BradsTestRule/Data Models/Rule_DM.datamodel</ns1:model>
+        </ns1:parameter>
+    </ns1:parameters>
+    <ns1:fields>
+        <ns1:field id="1">
+            <ns1:name>age</ns1:name>
+            <ns1:fieldType>condition</ns1:fieldType>
+            <ns1:slotKey>/age;3.6;0</ns1:slotKey>
+            <ns1:ioKey>-4994f6bb:1555ef5159e:-7fee</ns1:ioKey>
+            <ns1:innerModel>/BradsTestRule/Data Models/Rule_DM.datamodel</ns1:innerModel>
+            <ns1:qualifiedName>Rule_DM_1.age</ns1:qualifiedName>
+            <ns1:suppressWarnings/>
+        </ns1:field>
+        <ns1:field id="2">
+            <ns1:name>YearofService</ns1:name>
+            <ns1:fieldType>condition</ns1:fieldType>
+            <ns1:slotKey>/YearofService;3.6;0</ns1:slotKey>
+            <ns1:ioKey>-4994f6bb:1555ef5159e:-7fee</ns1:ioKey>
+            <ns1:innerModel>/BradsTestRule/Data Models/Rule_DM.datamodel</ns1:innerModel>
+            <ns1:qualifiedName>Rule_DM_1.YearofService</ns1:qualifiedName>
+            <ns1:suppressWarnings/>
+        </ns1:field>
+        <ns1:field id="3">
+            <ns1:name>percentageIncrease_1</ns1:name>
+            <ns1:fieldType>result</ns1:fieldType>
+            <ns1:slotKey>/percentageIncrease;3.4;0</ns1:slotKey>
+            <ns1:ioKey>-4994f6bb:1555ef5159e:-7fee</ns1:ioKey>
+            <ns1:innerModel>/BradsTestRule/Data Models/Rule_DM.datamodel</ns1:innerModel>
+            <ns1:qualifiedName>Rule_DM_1.percentageIncrease</ns1:qualifiedName>
+            <ns1:suppressWarnings/>
+        </ns1:field>
+    </ns1:fields>
+    <ns1:suppressWarnings/>
+    <ns2:rules>
+        <ns2:rule>
+            <ns2:conditions>
+                <ns1:condition>
+                    <ns1:fieldId>1</ns1:fieldId>
+                    <ns1:suppressWarnings/>
+                    <ns1:operatorType>LT</ns1:operatorType>
+                    <ns1:value type="literal">
+                        <ns1:literal>20</ns1:literal>
+                    </ns1:value>
+                </ns1:condition>
+                <ns1:condition>
+                    <ns1:fieldId>2</ns1:fieldId>
+                    <ns1:suppressWarnings/>
+                    <ns1:operatorType>LT</ns1:operatorType>
+                    <ns1:value type="literal">
+                        <ns1:literal>2</ns1:literal>
+                    </ns1:value>
+                </ns1:condition>
+            </ns2:conditions>
+            <ns2:results>
+                <ns1:result>
+                    <ns1:fieldId>3</ns1:fieldId>
+                    <ns1:suppressWarnings/>
+                    <ns1:operatorType>AS</ns1:operatorType>
+                    <ns1:value type="literal">
+                        <ns1:literal>1.0</ns1:literal>
+                    </ns1:value>
+                </ns1:result>
+            </ns2:results>
+            <ns2:suppressWarnings/>
+        </ns2:rule>
+        <ns2:rule>
+            <ns2:conditions>
+                <ns1:condition>
+                    <ns1:fieldId>1</ns1:fieldId>
+                    <ns1:suppressWarnings/>
+                    <ns1:operatorType>GTEQ</ns1:operatorType>
+                    <ns1:value type="literal">
+                        <ns1:literal>20</ns1:literal>
+                    </ns1:value>
+                </ns1:condition>
+                <ns1:condition>
+                    <ns1:fieldId>2</ns1:fieldId>
+                    <ns1:suppressWarnings/>
+                    <ns1:operatorType>GTEQ</ns1:operatorType>
+                    <ns1:value type="literal">
+                        <ns1:literal>2</ns1:literal>
+                    </ns1:value>
+                </ns1:condition>
+            </ns2:conditions>
+            <ns2:results>
+                <ns1:result>
+                    <ns1:fieldId>3</ns1:fieldId>
+                    <ns1:suppressWarnings/>
+                    <ns1:operatorType>AS</ns1:operatorType>
+                    <ns1:value type="literal">
+                        <ns1:literal>2.5</ns1:literal>
+                    </ns1:value>
+                </ns1:result>
+            </ns2:results>
+            <ns2:suppressWarnings/>
+        </ns2:rule>
+        <ns2:rule>
+            <ns2:conditions>
+                <ns1:condition>
+                    <ns1:fieldId>1</ns1:fieldId>
+                    <ns1:suppressWarnings/>
+                    <ns1:operatorType>GT</ns1:operatorType>
+                    <ns1:value type="literal">
+                        <ns1:literal>39</ns1:literal>
+                    </ns1:value>
+                </ns1:condition>
+                <ns1:condition>
+                    <ns1:fieldId>2</ns1:fieldId>
+                    <ns1:suppressWarnings/>
+                    <ns1:operatorType>GTEQ</ns1:operatorType>
+                    <ns1:value type="literal">
+                        <ns1:literal>10</ns1:literal>
+                    </ns1:value>
+                </ns1:condition>
+            </ns2:conditions>
+            <ns2:results>
+                <ns1:result>
+                    <ns1:fieldId>3</ns1:fieldId>
+                    <ns1:suppressWarnings/>
+                    <ns1:operatorType>AS</ns1:operatorType>
+                    <ns1:value type="literal">
+                        <ns1:literal>4.0</ns1:literal>
+                    </ns1:value>
+                </ns1:result>
+            </ns2:results>
+            <ns2:suppressWarnings/>
+        </ns2:rule>
+        <ns2:rule>
+            <ns2:conditions>
+                <ns1:condition>
+                    <ns1:fieldId>1</ns1:fieldId>
+                    <ns1:suppressWarnings/>
+                    <ns1:operatorType>LT</ns1:operatorType>
+                    <ns1:value type="literal">
+                        <ns1:literal>20</ns1:literal>
+                    </ns1:value>
+                </ns1:condition>
+                <ns1:condition>
+                    <ns1:fieldId>2</ns1:fieldId>
+                    <ns1:suppressWarnings/>
+                    <ns1:operatorType>GTEQ</ns1:operatorType>
+                    <ns1:value type="literal">
+                        <ns1:literal>2</ns1:literal>
+                    </ns1:value>
+                </ns1:condition>
+            </ns2:conditions>
+            <ns2:results>
+                <ns1:result>
+                    <ns1:fieldId>3</ns1:fieldId>
+                    <ns1:suppressWarnings/>
+                    <ns1:operatorType>AS</ns1:operatorType>
+                    <ns1:value type="literal">
+                        <ns1:literal>1.5</ns1:literal>
+                    </ns1:value>
+                </ns1:result>
+            </ns2:results>
+            <ns2:suppressWarnings/>
+        </ns2:rule>
+    </ns2:rules>
+</ns2:decisionTable>
